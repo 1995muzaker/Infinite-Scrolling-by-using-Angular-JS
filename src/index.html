@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+    <script src="node_modules\angular\angular.min.js"></script>
+    <script src="node_modules\angular\angular.js"></script>
+    <script src="node_modules\ng-infinite-scroll\build\ng-infinite-scroll.js"></script>
+    <script src="node_modules\ng-infinite-scroll\build\ng-infinite-scroll.min.js"></script>
+    <script src="app.js"></script>
+    <title>Jingelbol</title>
+  </head>
+  <body>
+    
+    <div ng-app='myApp' ng-controller='DemoController'>
+      <div infinite-scroll='loadMore()' infinite-scroll-distance='2'>
+      <div class="wrap">
+        <div class="icon">
+          <ul>
+            <li class="list-inline"><img ng-src="{{myVar}}" ng-init="myVar = 'images/paws.png'"></li>
+            <li class="list-inline"><img ng-src="{{myVar1}}" ng-init="myVar1 = 'images/dish.png'"></li>
+            <li class="list-inline"><img ng-src="{{myVar2}}" ng-init="myVar2 = 'images/thunder.png'"></li>
+          </ul>
+        </div>
+         <div class="search">
+            <img class="search-img" ng-src="{{myVar4}}" ng-init="myVar4 = 'images/search.png'">
+            <input type="text" class="searchTerm" ng-model="searchStr">
+            <img ng-src="{{myVar3}}" ng-init="myVar3 = 'images/avatar.png'">
+         </div>
+      </div>
+      <div class="container">
+      <div class="row tab" ng-controller="TabController">
+        <div class="col-md-10 col-xs-9 s-tab">
+          <div class="jumbotron">
+            <div ng-show="isSet(1)">
+               <img ng-src="{{myVar5}}" ng-init="myVar5 = 'images/main-1.jpg'" class="img-fluid">
+            </div>
+          <div ng-show="isSet(2)">
+              <img ng-src="{{myVar6}}" ng-init="myVar6 = 'images/main-2.jpg'" class="img-fluid">
+          </div>
+            <div ng-show="isSet(3)">
+              <img ng-src="{{myVar7}}" ng-init="myVar7 = 'images/main-3.jpg'" class="img-fluid">
+          </div>
+          <div ng-show="isSet(4)">
+              <img ng-src="{{myVar7}}" ng-init="myVar7 = 'images/main-3.jpg'" class="img-fluid">
+          </div>
+          </div>
+        </div>
+        <div class="col-md-2 col-xs-3 tab-1">
+          <h2>Jinglebol</h2>
+          <hr class="line">
+          <p>Let The World <br>Discover You</p>
+          <ul class="nav nav-pills nav-stacked">
+            <li ng-class="{ active: isSet(1) }">
+                <a href ng-click="setTab(1)"><img ng-src="{{myVar5}}" ng-init="myVar5 = 'images/main-1.jpg'" class="img-fluid">&nbsp;&nbsp;Artwork Name</a>
+            </li>
+            <li ng-class="{ active: isSet(2) }">
+                <a href ng-click="setTab(2)"><img ng-src="{{myVar6}}" ng-init="myVar6 = 'images/main-2.jpg'" class="img-fluid">&nbsp;&nbsp;Artwork Name</a>
+            </li>
+            <li ng-class="{ active: isSet(3) }">
+                <a href ng-click="setTab(3)"><img ng-src="{{myVar7}}" ng-init="myVar7 = 'images/main-3.jpg'" class="img-fluid">&nbsp;&nbsp;Artwork Name</a>
+            </li>
+            <li ng-class="{ active: isSet(4) }">
+                <a href ng-click="setTab(4)"><img ng-src="{{myVar7}}" ng-init="myVar7 = 'images/main-3.jpg'" class="img-fluid">&nbsp;&nbsp;Artwork Name</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="line-1">
+      <div class="row event" ng-controller="myCtrl">
+        <h2 class="event-h">Upcoming Events</h2>
+        <div class="owl-carousel main-event">
+          <div class="event-1">
+            <p>{{name}}</p>
+            <h2>{{date}}</h2>
+            <p>{{day}}</p>
+          </div>
+          <div class="event-1">  
+            <p>{{name1}}</p>
+            <h2>{{date1}}</h2>
+            <p>{{day1}}</p>
+          </div>
+          <div class="event-1">  
+            <p>{{name2}}</p>
+            <h2>{{date2}}</h2>
+            <p>{{day2}}</p>
+          </div>
+          <div class="event-1">  
+            <p>{{name3}}</p>
+            <h2>{{date3}}</h2>
+            <p>{{day3}}</p>
+          </div>
+          <div class="event-1">  
+            <p>{{name3}}</p>
+            <h2>{{date3}}</h2>
+            <p>{{day3}}</p>
+          </div>
+          <div class="event-1">  
+            <p>{{name3}}</p>
+            <h2>{{date3}}</h2>
+            <p>{{day3}}</p>
+          </div>
+          <div>  
+            <p>{{name3}}</p>
+            <h2>{{date3}}</h2>
+            <p>{{day3}}</p>
+          </div>
+        </div>
+        <p class="button">View All</p>
+        <div class="control">
+          <p class="button-1">Prev</p>&nbsp;&nbsp;&nbsp;&nbsp;<hr class="line-3">&nbsp;&nbsp;&nbsp;&nbsp;<p class="button-1">Next</p>
+        </div>
+        
+      </div>
+      <hr class="line-4">
+      <div class="row event" ng-controller="blogCtrl">
+        <h2 class="event-h">Trending Blogs</h2>
+        <div class="owl-carousel">
+          <div class="event-2">
+            <p class="date-p">{{date}}</p>
+            <h3 class="name-h">{{name}}</h3>
+            <p class="para-p">{{para}}</p>
+            <p class="but-p">{{but}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date1}}</p>
+            <h3 class="name-h">{{name1}}</h3>
+            <p class="para-p">{{para1}}</p>
+            <p class="but-p">{{but1}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date2}}</p>
+            <h3 class="name-h">{{name2}}</h3>
+            <p class="para-p">{{para2}}</p>
+            <p class="but-p">{{but2}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date3}}</p>
+            <h3 class="name-h">{{name3}}</h3>
+            <p class="para-p">{{para3}}</p>
+            <p class="but-p">{{but3}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date3}}</p>
+            <h3 class="name-h">{{name3}}</h3>
+            <p class="para-p">{{para3}}</p>
+            <p class="but-p">{{but3}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date3}}</p>
+            <h3 class="name-h">{{name3}}</h3>
+            <p class="para-p">{{para3}}</p>
+            <p class="but-p">{{but3}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+          <div class="event-2">  
+            <p class="date-p">{{date3}}</p>
+            <h3 class="name-h">{{name3}}</h3>
+            <p class="para-p">{{para3}}</p>
+            <p class="but-p">{{but3}}&nbsp;&nbsp;<i class="fas fa-arrow-circle-right"></i></p>
+          </div>
+        </div>
+        <p class="button">View All</p>
+        <div class="control">
+          <p class="button-1">Prev</p>&nbsp;&nbsp;&nbsp;&nbsp;<hr class="line-3">&nbsp;&nbsp;&nbsp;&nbsp;<p class="button-1">Next</p>
+        </div>
+        
+      </div>
+      <hr class="line-4">
+      <div class="row">
+        <h2 class="event-h">Discover Jinglebol</h2>
+      </div>
+      <div class="row event-3" ng-repeat='image in images | filter:searchStr' ng-controller="eventController">
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar8}}" ng-init="myVar8 = 'images/event-1.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user}}</p>
+          <p class="event-3-d">{{date}}<span>{{share}}</span></p>
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt}}</h4>
+        </div>  
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar9}}" ng-init="myVar9 = 'images/event-2.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names1}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user1}}</p>
+          <p class="event-3-d">{{date1}}<span>{{share}}</span></p>
+          
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt1}}</h4>
+        </div>  
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar10}}" ng-init="myVar10 = 'images/event-3.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names2}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user2}}</p>
+          <p class="event-3-d">{{date2}}<span>{{share}}</span></p>
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt2}}</h4>
+        </div>  
+      </div>
+      <div class="row event-3" ng-controller="eventController">
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar8}}" ng-init="myVar8 = 'images/event-1.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user}}</p>
+          <p class="event-3-d">{{date}}<span>{{share}}</span></p>
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt}}</h4>
+        </div>  
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar9}}" ng-init="myVar9 = 'images/event-2.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names1}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user1}}</p>
+          <p class="event-3-d">{{date1}}<span>{{share}}</span></p>
+          
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt1}}</h4>
+        </div>  
+        <div class="col-sm-4 main-e">
+          <img ng-src="{{myVar10}}" ng-init="myVar10 = 'images/event-3.jpg'" class="img-fluid">
+          <h3 class="event-3-h">{{names2}}<span><i class="fas fa-heart"></i>&nbsp;&nbsp;300</span></h3>
+          <p class="event-3-p">{{user2}}</p>
+          <p class="event-3-d">{{date2}}<span>{{share}}</span></p>
+          <hr class="line-5">
+          <h4 class="event-3-c">{{cmnt2}}</h4>
+        </div>  
+      </div>
+      
+    </div>  
+      <footer>
+        <div class="container">
+          <div class="row f-1" ng-controller="footer">
+            <div class="col-sm-12">
+              <img ng-src="{{myVar11}}" ng-init="myVar11 = 'images/footer-icon.png'" class="img-fluid">
+              <ul>
+                <li>{{place1}} |</li>
+                <li>{{place2}} |</li>
+                <li>{{place3}}</li>
+              </ul>
+              <div class="socio-ico">
+                <ul>
+                  <li><i class="fab fa-facebook-f"></i></li>
+                  <li><i class="fab fa-linkedin-in"></i></li>
+                  <li><i class="fab fa-instagram"></i></li>
+                  <li><i class="fab fa-twitter"></i></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 f-2">
+              <hr style="border-color: #fff;">
+              <ul>
+                <li>{{f1}}</li>
+                <li>{{f2}}</li>
+                <li>{{f3}}</li>
+                <li>{{f4}}</li>
+                <li>{{f5}}</li>
+                <li>{{f6}}</li>
+                <li>{{f7}}</li>
+              </ul>
+              <p>&copy; Jinglebol2018 | <a href="#">Terms of use and policy</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      </div>
+    </div>
+    <div ng-view class="container"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/owl.js"></script>
+  </body>
+</html>

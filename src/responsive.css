@@ -1,0 +1,183 @@
+@media(max-width: 768px){
+.icon {
+    width: 27%;
+    float: left;
+	}
+.icon ul{
+	padding: 0;
+}
+.search {
+    width: 73%;
+    float: left;
+}
+.search input{
+	width: 95%;
+}
+.search img{
+	top: 8px;
+    right: 11%;
+}
+.search-img{
+	left: 31% !important;
+	top: 15px !important;
+}
+.f-1 ul{
+	margin: 0% 31%;
+}
+.socio-ico ul{
+	margin: 1% 34%;
+}
+.s-tab{
+	width: 100%;
+}
+.tab-1{
+	width: 100%;
+}
+.tab-1 ul li{
+	padding: 13px 0px;
+	border: none;
+	font-size: 11px;
+}
+.tab-1 p{
+	font-size: 11px;
+}
+.tab-1 h2{
+	font-size: 18px;
+}
+.nav-pills > li.active > a, .btn-primary {
+    color: gray !important;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+}
+@media (max-width: 414px){
+	.icon {
+    width: 100%;
+    margin: 0px 20px;
+    float: left;
+}
+.search{
+	    width: 85%;
+    float: left;
+    margin: 0px 20px;
+}
+.search input{
+	width: 100%;
+}
+.search img{
+	top: 66px;
+    right: 13%;
+}
+.search-img{
+	    left: 14% !important;
+    width: 26px !important;
+    top: 74px !important;
+}
+.wrap{
+	 padding: 2% 0% 2%;
+}
+.jumbotron{
+	background: #fff;
+}
+.jumbotron img{
+	margin:0px 12px;
+}
+.tab-1{
+	margin:0px 12px;
+}
+.owl-carousel{
+	width: 100% !important;
+	float: left;
+}
+.line-3{
+	width: 58%;
+}
+.control{
+	padding: 0% 9%;
+}
+.button-1{
+	margin: 0px 5px;
+}
+.event-1{
+	width: 100%;
+}
+.event-2{
+	width: 100%;
+	margin: 0;
+}
+footer img{
+	margin: 0% 32% 0%;
+}
+.f-1 ul{
+	margin:0% 9%;
+}
+.socio-ico ul{
+	margin: 1% 13%;
+}
+}
+
+@media (max-width: 360px){
+	.icon {
+    width: 100%;
+    margin: 0px 20px;
+    float: left;
+}
+.search{
+	    width: 85%;
+    float: left;
+    margin: 0px 20px;
+}
+.search input{
+	width: 100%;
+}
+.search img{
+	top: 66px;
+    right: 13%;
+}
+.search-img{
+	    left: 14% !important;
+    width: 26px !important;
+    top: 74px !important;
+}
+.wrap{
+	 padding: 2% 0% 2%;
+}
+.jumbotron{
+	background: #fff;
+}
+.jumbotron img{
+	margin:0px 12px;
+}
+.tab-1{
+	margin:0px 12px;
+}
+.owl-carousel{
+	width: 100% !important;
+	float: left;
+}
+.line-3{
+	width: 58%;
+}
+.control{
+	padding: 0% 9%;
+}
+.button-1{
+	margin: 0px 5px;
+}
+.event-1{
+	width: 100%;
+}
+.event-2{
+	width: 100%;
+	margin: 0;
+}
+footer img{
+	margin: 0% 32% 0%;
+}
+.f-1 ul{
+	margin:0% 9%;
+}
+.socio-ico ul{
+	margin: 1% 13%;
+}
+}
